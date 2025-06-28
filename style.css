@@ -1,0 +1,107 @@
+*{
+    box-sizing: content-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgb(240, 232, 232) 0% , rgb(134, 219, 242));
+    margin: 0;
+    padding: 20px;
+}
+
+.calculator{
+    width: 320px;
+    background-color: #2c3e50;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgb(53, 51, 51) ;
+    overflow: hidden;
+}
+
+.display{
+    background-color: rgb(240, 237, 237);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    font-size: 2.5rem;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+}
+
+.previous-operand{
+    font-size: 1rem;
+    color: black;
+    height: 25px;
+    overflow: hidden;
+
+}
+
+.current-operand{
+    font-size: 1em;
+    color: black;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+
+}
+
+button{
+    border: none;
+    border-radius: 10px;
+    padding: 20px 0;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #415a74;
+    color: white;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover{
+    background-color: #346293;
+}
+
+button:active{
+    transform: scale(0.95)
+}
+
+button.operator{
+    background-color: #f39c12;
+}
+
+button.operator:hover{
+    background-color: #f3c612;
+    color: black;
+}
+
+button.clear{
+    background-color: rgb(249, 48, 48);
+}
+
+button.clear:hover{
+    background-color:  rgb(239, 129, 101);
+    color: black;
+}
+
+button.equals{
+    background-color: rgb(20, 20, 247);
+    grid-column: span 2;
+}
+
+button.equals:hover{
+    background-color: rgb(87, 87, 244);
+    color: black;
+}
